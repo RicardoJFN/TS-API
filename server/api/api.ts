@@ -2,6 +2,9 @@ import * as express from 'express';
 import { Application } from 'express';
 import * as morgan from 'morgan';
 import * as bodyParser from 'body-parser';
+import Routes from './routes/routes';
+
+
 
 class Api {
     
@@ -17,6 +20,9 @@ class Api {
         this.express.use(bodyParser.json());
     }
 
+    private router(app: Application): void {
+        new Routes(app);
+    }
 
 }
 
