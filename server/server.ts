@@ -6,7 +6,7 @@ const config = require('./config/env/config')();
 
 const server = http.createServer(Api);
 
-Api.use(errorHandlerApi);
-
-server.listen(config.serverPort, () => console.log('Server listen in port 3000'));
+server.listen(config.serverPort);
+server.on('listening', () => console.log(`Server running in port: ${config.serverPort}`));
+server.on('error', (error: NodeJS.ErrnoException) => console.log(`An error has occurred: ${error}`));
 

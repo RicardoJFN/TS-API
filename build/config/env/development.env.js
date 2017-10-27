@@ -2,7 +2,7 @@ module.exports = {
     env: 'development',
     db: 'ts-api',
     dialect: 'postgre',
-    username: 'postgre',
+    username: 'postgres',
     password: 'Admin123#',
     host: 'localhost',
     serverPort: 3000,

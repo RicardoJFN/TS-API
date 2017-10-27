@@ -6,7 +6,7 @@ var Routes = /** @class */ (function () {
     }
     Routes.prototype.getRoutes = function (app) {
         app.route('/').get(function (req, res) { return res.send('Hello World!'); });
-        app.route('/hello/:name').get(function (req, res) { return res.send('Hello, ${req.params.name}'); });
+        app.route('/hello/:name').get(function (req, res) { return res.send("Hello, " + req.params.name); });
     };
     return Routes;
 }());

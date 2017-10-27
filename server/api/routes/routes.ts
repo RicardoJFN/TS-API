@@ -5,10 +5,11 @@ class Routes {
     constructor(app: Application) {
         this.getRoutes(app);
     }
+    
 
     getRoutes(app: Application): void {
         app.route('/').get((req: Request, res: Response) => res.send('Hello World!'));
-        app.route('/hello/:name').get((req: Request, res: Response) => res.send('Hello, ${req.params.name}'));
+        app.route('/hello/:name').get((req: Request, res: Response) => res.send(`Hello, ${req.params.name}`));
     }
 }
 
